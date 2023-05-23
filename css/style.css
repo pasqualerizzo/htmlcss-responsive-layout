@@ -10,18 +10,128 @@ header {
     background-color: var(--secondary-color);
 }
 
+nav {
+    display: none;
+}
+
 .header-row {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 1.25rem;
+    padding: 1.25rem 0;
 }
 
-.header-row ul li{
-    text-decoration: none;
-    color: white;
+.header-row ul li {
     list-style: none;
     display: inline;
+}
+
+.header-row ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Fine header */
+
+
+/* Main */
+
+/* First Section */
+
+.first-section{
+    background-color: #ffff;
+    margin: 0 1.25rem;
+}
+
+
+.first-section .row-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3.5rem 0;
+}
+
+.row-cards .col-card {
+    background-color: var(--light-secondary-color);
+    width: 100%;
+    margin-bottom: .625rem;
+    border-radius: 1.25rem;
+}
+
+/* End First Section */
+
+/* Second Section */
+
+.second-section {
+    background-color:var(--main-color);
+}
+
+.row-content {
+    background-color:var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+}
+
+.col-content {
+    width: 100%;
+}
+
+/* End Second Section */
+
+/* Third Section */
+
+.container h3,h2,p {
+    text-align: center;
+}
+
+.third-section {
+    background-color: #fff ;
+}
+
+.third-section .row-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3.5rem 0;
+}
+
+.third-section .row-cards .col-card {
+    background-color: var(--main-color);
+    width: 100%;
+    margin: 0 .625rem;
+    margin-bottom: .625rem;
+    border-radius: 1.25rem;
+}
+
+/* End Third Section */
+
+/* Fourth-section */
+
+.fourth-section {
+    background-color: var(--main-color);
+}
+
+.fourth-section .row-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3.5rem 0;
+    background-color: var(--main-color);
+}
+
+.fourth-section .row-cards .col-card {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: .625rem;
+    border-radius: 1.25rem;
+    margin: 0.625rem;
+}
+
+/* End Fourth-section */
+
+/* Fifth-section*/
+
+.row-about {
+    margin-bottom: 3.5rem;
 }
 
 
@@ -40,7 +150,10 @@ header {
 
 /* Debug */
 
-
+.debug {
+    height: 6.25rem;
+    border: 1px solid black;
+}
 
 
 
@@ -55,11 +168,82 @@ header {
 /* MOBILE PICCOLO */
 @media screen and (min-width: 480px) {
 
+   
 }
 
 /* TABLET */
 
 @media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: none;
+    }
+    /* Header */
+
+    /* First Section */
+    .col-card:first-child {
+        width: calc((100% / 3 ) * 2 - 6px) ;
+    }
+
+    .col-card:nth-child(2) {
+        width: calc((100% / 3) - 10px);
+        margin-left: 15px;
+      }
+
+    .col-card:nth-child(3) {
+      width: calc((100% / 3) - 10px);
+    }
+    .col-card:nth-child(4) {
+        width: calc((100% / 3) - 10px);
+        margin: 0 15px;
+    }
+    .col-card:nth-child(5) {
+        width: calc((100% / 3) - 10px);
+    }
+    /* End First Section */
+
+    /* Third Section */
+
+    .third-section .col-card {
+        align-items: center;
+        align-self: center;
+    }
+
+    .third-section .row-partners {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .profile-picture{
+        width: 20%;
+    }
+    .profile-description{
+        width: 75%;
+    }
+
+    /* Fourth Section */
+    .fourth-section .row-cards .col-card {
+        width: calc((100% / 2) - 20px);
+    }
+    /* End Fourth Section */
+
+    /* Fifth-section */
+    .fifth-section .row-about {
+        display: flex;
+    }
+
+    .fifth-section .col-about-description {
+        width: 60%;
+    }
+
+    .fifth-section .col-about-leader {
+        width: 40%;
+    }
+
+    /* End Fifth-section */
+
+
     
 }
 
@@ -67,4 +251,36 @@ header {
 
 @media screen and (min-width: 992px) {
     
+    /* Header */
+    
+    header .menu{
+        display: none;
+    }
+    header nav {
+        display: block;
+    }
+
+    .header-row {
+        margin: 0;
+    }
+
+
+
+    /* Second-section */
+    .second-section .row-content{
+       
+    }
+    .second-section .col-content{
+        width: 50%;
+    }
+
+    
+    /* End Second-section */
+
+
+    /* Fourth Section */
+    .fourth-section .row-cards .col-card {
+        width: calc((100% / 3) - 20px);
+    }
+    /* End Fourth Section */
 }
