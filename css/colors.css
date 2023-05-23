@@ -1,6 +1,8 @@
 /* Colors */
 
 :root {
---main-color: #fff;
---secondary-color: #000000;
+--main-color: #9792e4;
+--secondary-color: #0084fd;
+--light-secondary-color: #b5ddff;
+--copywright-footer: #333333;
 }
