@@ -4,6 +4,13 @@
 
 /* Home */
 
+.button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: .625rem 1.25rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+}
 /* Header */
 
 header {
@@ -18,6 +25,7 @@ nav {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 1.25rem;
     padding: 1.25rem 0;
 }
@@ -27,9 +35,13 @@ nav {
     display: inline;
 }
 
-.header-row ul li a {
+.header-row a {
     text-decoration: none;
     color: white;
+}
+
+.header-row i {
+    font-size: 1.875rem
 }
 
 /* Fine header */
@@ -54,9 +66,56 @@ nav {
 .row-cards .col-card {
     background-color: var(--light-secondary-color);
     width: 100%;
-    margin-bottom: .625rem;
+    margin-bottom: 1.25rem;
     border-radius: 1.25rem;
+    padding: 0 2.5rem;
 }
+
+.col-app-store h2 {
+    color: var(--secondary-color);
+    padding: 1.875rem 0;
+}
+
+.col-app-store a {
+    margin: 30px 0;
+}
+
+.col-phone-img img {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.row-application {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.col-card .button {
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+.col-card > i {
+    font-size: 5rem;
+    text-align: center;
+    padding: 1.875rem 0;
+    display: block;
+}
+
+.col-card > h2 {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.col-card > p {
+    text-align: center;
+    line-height: 1.875rem;
+    padding: 1.875rem 0;
+}
+
 
 /* End First Section */
 
@@ -71,18 +130,79 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3.5rem;
+    align-items: flex-end
 }
 
 .col-content {
     width: 100%;
+    padding: 2.5rem 1.25rem;
 }
+
+.background-development {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3.75rem;
+    text-align: center;
+}
+
+.col-content img {
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+
+.col-content h2 {
+    margin: 1.875rem 0;
+    color: #fff;
+}
+
+.col-content p:last-child {
+    color: #fff;
+    line-height: 1.875rem;
+}
+
+.col-content .background-development p {
+    margin: .9375rem 1.25rem;
+    line-height: 2.5rem;
+    font-style: italic;
+}
+
+.col-content .background-development a {
+    display: inline-block;
+    background-color: var(--main-color);
+    text-decoration: none;
+    border-radius: 100%;
+    height: 3.125rem;
+    width: 3.125rem;
+    margin-bottom: 1.25rem;
+}
+.col-content .background-development i {
+  font-size: 1.5rem;
+  margin-top: .75rem;
+}
+
+
 
 /* End Second Section */
 
 /* Third Section */
 
-.container h3,h2,p {
+.third-section {
     text-align: center;
+    margin: 0 1.25rem;
+}
+
+.third-section h5{
+    font-weight: 300;
+}
+
+.third-section h2{
+    color: var(--main-color);
+    padding: 1.875rem 0;
+}
+
+.third-section p {
+    line-height: 1.875rem;
 }
 
 .third-section {
@@ -98,9 +218,16 @@ nav {
 .third-section .row-cards .col-card {
     background-color: var(--main-color);
     width: 100%;
-    margin: 0 .625rem;
     margin-bottom: .625rem;
     border-radius: 1.25rem;
+}
+
+.profile-picture img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1.25rem 0;
 }
 
 /* End Third Section */
@@ -197,10 +324,20 @@ nav {
     .col-card:nth-child(4) {
         width: calc((100% / 3) - 10px);
         margin: 0 15px;
+        margin-bottom: 20px;
     }
 
     .col-card:nth-child(5) {
         width: calc((100% / 3) - 10px);
+    }
+
+    .col-card .button {
+        width: 60%;
+    }
+    
+    .col-phone-img img {
+        width: 60%;
+        text-align: center;
     }
     /* End First Section */
 
@@ -264,6 +401,25 @@ nav {
     }
     /* End Header */
 
+    /* First Section */
+    .row-application .col-app-store {
+        width: 50%;
+    }
+
+    .row-application .col-phone-img {
+        width: 50%;
+        text-align: center;
+        justify-content: flex-end;
+    }
+
+    .row-application .col-phone-img img {
+        width: 80%;
+        text-align: center;
+    }
+
+    
+    /* End First Section */
+
     /* Second-section */
     .second-section .row-content{
        
@@ -271,6 +427,12 @@ nav {
     
     .second-section .col-content{
         width: 50%;
+        justify-content: flex-end;
+    }
+
+    .col-content .background-development img {
+        width: 50%;
+        margin-top: 1.25rem;
     }
     /* End Second-section */
 
